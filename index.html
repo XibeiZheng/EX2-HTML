@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAYON SHINCHAN: The Naughtiest Boy in Town</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .content img {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .left-image {
+            width: 75%; /* 左图占四分之三 */
+            height: auto;
+        }
+        .right-image {
+            width: 25%; /* 右图占四分之一 */
+            height: auto;
+        }
+        .text-content {
+            width: 100%;
+            line-height: 1.6;
+        }
+        .text-content h2 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center; /* 居中对齐标题 */
+        }
+        .text-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .header-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* 使文字间距更紧凑 */
+            margin-bottom: 20px;
+        }
+        .header-links a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .header-links a:hover {
+            text-decoration: underline;
+        }
+        .platform-info {
+            font-size: 0.9em; /* 字号稍小 */
+            color: #333;
+            text-align: center;
+            font-weight: bold;
+        }
+        .video-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .video-container video {
+            width: 60%; /* 缩小视频宽度 */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .characters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* 居中对齐角色信息 */
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .character {
+            width: 300px; /* 每个角色容器固定宽度 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .character img {
+            width: 150px; /* 统一图片大小 */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+        .character p {
+            margin-top: 10px;
+            max-width: 250px; /* 限制文字宽度 */
+        }
+        .character-name {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .form-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+            width: 100%; /* 确保表单元素宽度一致 */
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="radio"] {
+            width: auto;
+        }
+        .form-group textarea {
+            height: 100px;
+        }
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(45deg, #007BFF, #00BFFF);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .submit-button:hover {
+            background: linear-gradient(45deg, #0056b3, #0099ff);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .radio-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .radio-group label {
+            display: flex;
+            align-items: center;
+        }
+        .radio-group input {
+            margin-right: 5px;
+        }
+        .form-footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <!-- 左图 -->
+            <img src="shin-chan-banner.jpg" alt="Shinchan Banner" class="left-image">
+            <!-- 右图 -->
+            <img src="naughtiest-son.jpg" alt="CRAYON SHINCHAN: The Naughtiest Boy in Town" class="right-image">
+        </div>
+        <div class="header-links">
+            <a href="#game" style="text-decoration: underline;">Shinchan: Shiro and the Coal Town Game</a>
+            <a href="#characters" style="text-decoration: underline;">Characters</a>
+            <a href="#favorite" style="text-decoration: underline;">Who's your favorite?</a>  
+        </div>
+        <div class="text-content">
+            <h2 id="game" style="text-align: center;">Shinchan: Shiro and the Coal Town</h2>
+            <p class="platform-info">（Available on: Nintendo Switch and Windows PC）</p>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="shinchan-and-the-coal-town.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="text-content" id="characters">
+            <h2>Characters</h2>
+            <div class="characters">
+                <div class="character">
+                    <div class="character-name">Shinnosuke Nohara (Shinchan)</div>
+                    <img src="character-shinchan.png" alt="Shinnosuke Nohara (Shinchan)">
+                    <p>The mischievous 5-year-old protagonist known for his hilarious antics and love of choco chips.</p>
+                </div>
+                <div class="character">
+                    <div class="character-name">Misae Nohara (Mom)</div>
+                    <img src="character-misae.png" alt="Misae Nohara (Mom)">
+                    <p>Shinchan’s short-tempered but loving mother, always trying to keep him in line.</p>
+                </div>
+                <div class="character">
+                    <div class="character-name">Hiroshi Nohara (Dad)</div>
+                    <img src="character-hiroshi.png" alt="Hiroshi Nohara (Dad)">
+                    <p>The laid-back father who works at a company and enjoys his evening beer.</p>
+                </div>
+                <div class="character">
+                    <div class="character-name">Himawari (Sister)</div>
+                    <img src="character-himawari.png" alt="Himawari (Sister)">
+                    <p>The youngest of the Noharas. Loves shiny objects and brand-name goods. Smiles sideways, like Shinchan.</p>
+                </div>
+                <div class="character">
+                    <div class="character-name">Yukino Nohara (Shiro)</div>
+                    <img src="character-shiro.png" alt="Yukino Nohara (Shiro)">
+                    <p>The family dog — small, fluffy, and sometimes the most sensible member of the household.</p>
+                </div>
+                <div class="character">
+                    <div class="character-name">Toru Kazama</div>
+                    <img src="character-toru-kazama.png" alt="Toru Kazama">
+                    <p>The smart and responsible friend of Shinchan, often the voice of reason in the group.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-content" id="favorite">
+            <h2>Who's your favorite?</h2>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="favorite-character">Who's your favorite character?</label>
+                    <select id="favorite-character" name="favorite-character">
+                        <option value="Shinchan">Shinchan</option>
+                        <option value="Mom">Mom</option>
+                        <option value="Dad">Dad</option>
+                        <option value="Sister">Sister</option>
+                        <option value="Shiro">Shiro</option>
+                        <option value="Toru Kazama">Toru Kazama</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="other-character">Character not in the list? Write their name below:</label>
+                    <input type="text" id="other-character" name="other-character" placeholder="Enter character name">
+                </div>
+                <div class="form-group">
+                    <label for="reasons">Why do you like this character?</label>
+                    <textarea id="reasons" name="reasons" rows="4" placeholder="State your reasons in a couple of lines..."></textarea>
+                </div>
+                <div class="form-group">
+                    <h3>Tell us a bit more about yourself</h3>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label>Your Gender:</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" id="male" name="gender" value="male">
+                            Male
+                        </label>
+                        <label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            Female
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Your Date of Birth:</label>
+                    <input type="text" id="dob" name="dob" placeholder="yyyy/mm/dd" pattern="\d{4}/\d{2}/\d{2}">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+                <div class="form-footer">
+                    <p>© 2025 Programming4</p>
+                    <p>Get in touch with us: <a href="mailto:shinchan-lovers@justlearninghtml.com">shinchan-lovers@justlearninghtml.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
